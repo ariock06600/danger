@@ -687,45 +687,45 @@ export default function App() {
               </button>
             </div>
 
-            {/* Interactive Scene Viewer for Jardin */}
-            <SceneViewer
-              dangers={GARDEN_DANGERS_DATA}
-              foundDangerIds={foundJardinIds}
-              selectedDanger={selectedDanger}
-              onSelectDanger={(danger) => setSelectedDanger(danger)}
-              onReset={handleResetCurrentRoom}
-              imageSrc="/public/assets/aistudio/image_1c9aea3a.png"
-              roomName="le jardin"
-              aspectClass="aspect-16/9 sm:aspect-[2.15/1]"
-            />
-          </div>
-        )}
+  {/* Interactive Scene Viewer for Jardin */}
+      <SceneViewer
+        dangers={GARDEN_DANGERS_DATA}
+        foundDangerIds={foundJardinIds}
+        selectedDanger={selectedDanger}
+        onSelectDanger={(danger) => setSelectedDanger(danger)}
+        onReset={handleResetCurrentRoom}
+        imageSrc="./assets/aistudio/image_1c9aea3a.png"
+        roomName="le jardin"
+        aspectClass="aspect-16/9 sm:aspect-[2.15/1]"
+      />
+    </div>
+  )}
 
-        {currentTab === 'memo' && <MemoTab />}
+  {currentTab === 'memo' && <MemoTab />}
 
-        {currentTab === 'emergency' && <EmergencyTab />}
-      </main>
+  {currentTab === 'emergency' && <EmergencyTab />}
+</main>
 
-      {/* Dropdown Hazard Naming Modal */}
-      {selectedDanger && (
-        <DropdownSelectorModal
-          selectedDanger={selectedDanger}
-          foundDangerIds={currentFoundIds}
-          onCorrectAnswer={handleCorrectAnswer}
-          onClose={() => setSelectedDanger(null)}
-          imageSrc={
-            currentTab === 'jardin'
-              ? '/public/assets/aistudio/image_1c9aea3a.png'
-              : currentTab === 'garage'
-              ? '/public/assets/aistudio/image_549324c5.png'
-              : currentTab === 'salle_de_bain'
-              ? '/public/assets/aistudio/image_cd21f0d7.png'
-              : currentTab === 'chambre'
-              ? '/public/assets/aistudio/image_89c0b33a.png'
-              : currentTab === 'cuisine'
-              ? '/public/assets/aistudio/image_ef8c4428.png'
-              : '/public/assets/aistudio/image_5624f257.png'
-          }
+{/* Dropdown Hazard Naming Modal */}
+{selectedDanger && (
+  <DropdownSelectorModal
+    selectedDanger={selectedDanger}
+    foundDangerIds={currentFoundIds}
+    onCorrectAnswer={handleCorrectAnswer}
+    onClose={() => setSelectedDanger(null)}
+    imageSrc={
+      currentTab === 'jardin'
+        ? './assets/aistudio/image_1c9aea3a.png'
+        : currentTab === 'garage'
+        ? './assets/aistudio/image_549324c5.png'
+        : currentTab === 'salle_de_bain'
+        ? './assets/aistudio/image_cd21f0d7.png'
+        : currentTab === 'chambre'
+        ? './assets/aistudio/image_89c0b33a.png'
+        : currentTab === 'cuisine'
+        ? './assets/aistudio/image_ef8c4428.png'
+        : './assets/aistudio/image_5624f257.png'
+    }
         />
       )}
 
