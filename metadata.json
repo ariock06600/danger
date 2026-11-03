@@ -1,0 +1,6 @@
+{
+  "name": "Chasse aux Dangers - CE1",
+  "description": "Jeu éducatif interactif pour élèves de CE1 pour repérer et nommer les dangers domestiques dans la maison avec un menu déroulant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
