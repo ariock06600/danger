@@ -6,6 +6,10 @@ import { defineConfig } from 'vite';
 export default defineConfig(() => {
   return {
     base: '/danger/',
+    define: {
+      // Remplace automatiquement les chemins codés en dur par le studio
+      '/assets/aistudio/': JSON.stringify('/danger/assets/aistudio/'),
+    },
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
